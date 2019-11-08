@@ -1,0 +1,16 @@
+body {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.container {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	width: 1200px;
+	margin: 0 auto;
+}
+.item {
+	height: 300px;
+	border: 1px solid lightseagreen;
+}

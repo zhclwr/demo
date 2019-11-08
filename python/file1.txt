@@ -1,0 +1,700 @@
+/// <summary>
+/// 单据号
+/// <summary>
+public string DJH { get; set; }
+/// <summary>
+/// 本次住院次数
+/// <summary>
+public string BCZYCS { get; set; }
+/// <summary>
+/// 社保经办时间
+/// <summary>
+public string SBJBSJ { get; set; }
+/// <summary>
+/// 医疗费总费用
+/// <summary>
+public string YLFZFY { get; set; }
+/// <summary>
+/// 自费费用
+/// <summary>
+public string ZFFY { get; set; }
+/// <summary>
+/// 本次帐户支付
+/// <summary>
+public string BCZHZF { get; set; }
+/// <summary>
+/// 统筹支出
+/// <summary>
+public string TCZC { get; set; }
+/// <summary>
+/// 救助金支付金额
+/// <summary>
+public string JZJZFJE { get; set; }
+/// <summary>
+/// 公务员补助支付金额
+/// <summary>
+public string GWYBZZFJE { get; set; }
+/// <summary>
+/// 企业补充支付金额
+/// <summary>
+public string QYBCZFJE { get; set; }
+/// <summary>
+/// 个人现金支付
+/// <summary>
+public string GRXJZF { get; set; }
+/// <summary>
+/// 乙类自理金额
+/// <summary>
+public string YLZLJE { get; set; }
+/// <summary>
+/// 乙类药品自理
+/// <summary>
+public string YLYPZL { get; set; }
+/// <summary>
+/// 乙类诊疗自理
+/// <summary>
+public string YLZLZL { get; set; }
+/// <summary>
+/// 超限价自付费用
+/// <summary>
+public string CXJZFFY { get; set; }
+/// <summary>
+/// 符合基本医疗费用
+/// <summary>
+public string FHJBYLFY { get; set; }
+/// <summary>
+/// 起付标准自付
+/// <summary>
+public string QFBZZF { get; set; }
+/// <summary>
+/// 进入统筹费用
+/// <summary>
+public string JRTCFY { get; set; }
+/// <summary>
+/// 统筹分段自付
+/// <summary>
+public string TCFDZF { get; set; }
+/// <summary>
+/// 进入救助金费用
+/// <summary>
+public string JRJZJFY { get; set; }
+/// <summary>
+/// 救助金自付
+/// <summary>
+public string JZJZF { get; set; }
+/// <summary>
+/// 转诊先自付
+/// <summary>
+public string ZZXZF { get; set; }
+/// <summary>
+/// 超过救助金封顶线个人自付金额
+/// <summary>
+public string CGJZJFDXGRZFJE { get; set; }
+/// <summary>
+/// 门诊统筹费用
+/// <summary>
+public string MZTCFY { get; set; }
+/// <summary>
+/// 一次性材料费用
+/// <summary>
+public string YCXCLFY { get; set; }
+/// <summary>
+/// 药品费用
+/// <summary>
+public string YPFY { get; set; }
+/// <summary>
+/// 诊疗项目费用
+/// <summary>
+public string ZLXMFY { get; set; }
+/// <summary>
+/// 服务设施费用
+/// <summary>
+public string FWSSFY { get; set; }
+/// <summary>
+/// 统筹支付第一段
+/// <summary>
+public string TCZFDYD { get; set; }
+/// <summary>
+/// 统筹支付第二段
+/// <summary>
+public string TCZFDED { get; set; }
+/// <summary>
+/// 统筹支付第三段
+/// <summary>
+public string TCZFDSD { get; set; }
+/// <summary>
+/// 统筹支付第四段
+/// <summary>
+public string TCZFDSD { get; set; }
+/// <summary>
+/// 二乙民政补助支出
+/// <summary>
+public string EYMZBZZC { get; set; }
+/// <summary>
+/// 优抚人员财政基金支付
+/// <summary>
+public string YFRYCZJJZF { get; set; }
+/// <summary>
+/// 定点医疗机构支付
+/// <summary>
+public string DDYLJGZF { get; set; }
+/// <summary>
+/// 特检特治统筹支付
+/// <summary>
+public string TJTZTCZF { get; set; }
+/// <summary>
+/// 账户余额
+/// <summary>
+public string ZHYE { get; set; }
+/// <summary>
+/// 截止上次门诊统筹费用累计
+/// <summary>
+public string JZSCMZTCFYLJ { get; set; }
+/// <summary>
+/// 第一段个人自付
+/// <summary>
+public string DYDGRZF { get; set; }
+/// <summary>
+/// 第二段个人自付
+/// <summary>
+public string DEDGRZF { get; set; }
+/// <summary>
+/// 第三段个人自付
+/// <summary>
+public string DSDGRZF { get; set; }
+/// <summary>
+/// 第四段个人自付
+/// <summary>
+public string DSDGRZF { get; set; }
+/// <summary>
+/// 参加工作日期
+/// <summary>
+public string CJGZRQ { get; set; }
+/// <summary>
+/// 自付费用
+/// <summary>
+public string ZFFY { get; set; }
+/// <summary>
+/// 第一段分段下限
+/// <summary>
+public string DYDFDXX { get; set; }
+/// <summary>
+/// 第一段分段上限
+/// <summary>
+public string DYDFDSX { get; set; }
+/// <summary>
+/// 第一段分段基金支付比例
+/// <summary>
+public string DYDFDJJZFBL { get; set; }
+/// <summary>
+/// 第一段分段自付比例
+/// <summary>
+public string DYDFDZFBL { get; set; }
+/// <summary>
+/// 第二段分段下限
+/// <summary>
+public string DEDFDXX { get; set; }
+/// <summary>
+/// 第二段分段上限
+/// <summary>
+public string DEDFDSX { get; set; }
+/// <summary>
+/// 第二段分段基金支付比例
+/// <summary>
+public string DEDFDJJZFBL { get; set; }
+/// <summary>
+/// 第二段分段自付比例
+/// <summary>
+public string DEDFDZFBL { get; set; }
+/// <summary>
+/// 第三段分段下限
+/// <summary>
+public string DSDFDXX { get; set; }
+/// <summary>
+/// 第三段分段上限
+/// <summary>
+public string DSDFDSX { get; set; }
+/// <summary>
+/// 第三段分段基金支付比例
+/// <summary>
+public string DSDFDJJZFBL { get; set; }
+/// <summary>
+/// 第三段分段自付比例
+/// <summary>
+public string DSDFDZFBL { get; set; }
+/// <summary>
+/// 第四段分段下限
+/// <summary>
+public string DSDFDXX { get; set; }
+/// <summary>
+/// 第四段分段上限
+/// <summary>
+public string DSDFDSX { get; set; }
+/// <summary>
+/// 第四段分段基金支付比例
+/// <summary>
+public string DSDFDJJZFBL { get; set; }
+/// <summary>
+/// 第四段分段自付比例
+/// <summary>
+public string DSDFDZFBL { get; set; }
+/// <summary>
+/// 第五段分段下限
+/// <summary>
+public string DWDFDXX { get; set; }
+/// <summary>
+/// 第五段分段上限
+/// <summary>
+public string DWDFDSX { get; set; }
+/// <summary>
+/// 第五段分段基金支付比例
+/// <summary>
+public string DWDFDJJZFBL { get; set; }
+/// <summary>
+/// 第五段分段自付比例
+/// <summary>
+public string DWDFDZFBL { get; set; }
+/// <summary>
+/// 截至上次本年符合基本医疗累计
+/// <summary>
+public string JZSCBNFHJBYLLJ { get; set; }
+/// <summary>
+/// 截至上次本年基本医疗统筹累计
+/// <summary>
+public string JZSCBNJBYLTCLJ { get; set; }
+/// <summary>
+/// 单位名称
+/// <summary>
+public string DWMC { get; set; }
+/// <summary>
+/// 基残人员标志
+/// <summary>
+public string JCRYBZ { get; set; }
+/// <summary>
+/// 截至上次本年住院次数
+/// <summary>
+public string JZSCBNZYCS { get; set; }
+/// <summary>
+/// 本年门诊统筹累计(包括本次)
+/// <summary>
+public string BNMZTCLJ(BKBC) { get; set; }
+/// <summary>
+/// 本年符合基本医疗累计(包括本次)
+/// <summary>
+public string BNFHJBYLLJ(BKBC) { get; set; }
+/// <summary>
+/// 本年基本医疗统筹累计(包括本次)
+/// <summary>
+public string BNJBYLTCLJ(BKBC) { get; set; }
+/// <summary>
+/// 本年门诊慢性病统筹累计
+/// <summary>
+public string BNMZMXBTCLJ { get; set; }
+/// <summary>
+/// 本年门诊慢性病统筹累计和
+/// <summary>
+public string BNMZMXBTCLJH { get; set; }
+/// <summary>
+/// 医院内部住院号
+/// <summary>
+public string YYNBZYH { get; set; }
+/// <summary>
+/// 单位类型
+/// <summary>
+public string DWLX { get; set; }
+/// <summary>
+/// 乙类药品自付
+/// <summary>
+public string YLYPZF { get; set; }
+/// <summary>
+/// 乙类诊疗自付
+/// <summary>
+public string YLZLZF { get; set; }
+/// <summary>
+/// 自费药品金额
+/// <summary>
+public string ZFYPJE { get; set; }
+/// <summary>
+/// 基本医疗公补比例
+/// <summary>
+public string JBYLGBBL { get; set; }
+/// <summary>
+/// 大额公补比例
+/// <summary>
+public string DEGBBL { get; set; }
+/// <summary>
+/// 首次参保日期
+/// <summary>
+public string SCCBRQ { get; set; }
+/// <summary>
+/// 行政职务
+/// <summary>
+public string XZZW { get; set; }
+/// <summary>
+/// 截止上次本年救助金累计
+/// <summary>
+public string JZSCBNJZJLJ { get; set; }
+/// <summary>
+/// 本年救助金累计(包括本次)
+/// <summary>
+public string BNJZJLJ(BKBC) { get; set; }
+/// <summary>
+/// 截止上次本年公务员补助基金累计
+/// <summary>
+public string JZSCBNGWYBZJJLJ { get; set; }
+/// <summary>
+/// 本年公务员补助基金累计(包括本次)
+/// <summary>
+public string BNGWYBZJJLJ(BKBC) { get; set; }
+/// <summary>
+/// 公补第一段支付
+/// <summary>
+public string GBDYDZF { get; set; }
+/// <summary>
+/// 公补第二段支付
+/// <summary>
+public string GBDEDZF { get; set; }
+/// <summary>
+/// 公补第三段支付
+/// <summary>
+public string GBDSDZF { get; set; }
+/// <summary>
+/// 统筹公务员补助金额
+/// <summary>
+public string TCGWYBZJE { get; set; }
+/// <summary>
+/// 大额公务员补助金额
+/// <summary>
+public string DEGWYBZJE { get; set; }
+/// <summary>
+/// 超大额公务员补助金额
+/// <summary>
+public string CDEGWYBZJE { get; set; }
+/// <summary>
+/// 乙类费用
+/// <summary>
+public string YLFY { get; set; }
+/// <summary>
+/// 乙类统筹支付金额
+/// <summary>
+public string YLTCZFJE { get; set; }
+/// <summary>
+/// 乙类救助金支付金额
+/// <summary>
+public string YLJZJZFJE { get; set; }
+/// <summary>
+/// 超大额公补可报销费用
+/// <summary>
+public string CDEGBKBXFY { get; set; }
+/// <summary>
+/// 超大额公补支付
+/// <summary>
+public string CDEGBZF { get; set; }
+/// <summary>
+/// 特检特治费用（巴盟）(特检特治进入统筹分段计算)
+/// <summary>
+public string TJTZFY（BM）(TJTZJRTCFDJS) { get; set; }
+/// <summary>
+/// 特检特治大额支付
+/// <summary>
+public string TJTZDEZF { get; set; }
+/// <summary>
+/// 截止上次本年医疗费总额累计
+/// <summary>
+public string JZSCBNYLFZELJ { get; set; }
+/// <summary>
+/// 本年医疗费总额累计（包括本次）
+/// <summary>
+public string BNYLFZELJ（BKBC） { get; set; }
+/// <summary>
+/// 截止上次本年账户支付累计
+/// <summary>
+public string JZSCBNZHZFLJ { get; set; }
+/// <summary>
+/// 本年账户支付累计（包括本次）
+/// <summary>
+public string BNZHZFLJ（BKBC） { get; set; }
+/// <summary>
+/// 截止上次本年进入统筹累计金额
+/// <summary>
+public string JZSCBNJRTCLJJE { get; set; }
+/// <summary>
+/// 本年进入统筹累计金额(包括本次)
+/// <summary>
+public string BNJRTCLJJE(BKBC) { get; set; }
+/// <summary>
+/// 截止上次本年进入大额累计金额
+/// <summary>
+public string JZSCBNJRDELJJE { get; set; }
+/// <summary>
+/// 本年进入大额累计金额(包括本次)
+/// <summary>
+public string BNJRDELJJE(BKBC) { get; set; }
+/// <summary>
+/// 截止上次本年超大额封顶累计金额
+/// <summary>
+public string JZSCBNCDEFDLJJE { get; set; }
+/// <summary>
+/// 本年超大额封顶累计金额(包括本次)
+/// <summary>
+public string BNCDEFDLJJE(BKBC) { get; set; }
+/// <summary>
+/// 床位费统筹支付（乌海）
+/// <summary>
+public string CWFTCZF（WH） { get; set; }
+/// <summary>
+/// 甲类药品费
+/// <summary>
+public string JLYPF { get; set; }
+/// <summary>
+/// 乙类药品费(包括乙类自理)
+/// <summary>
+public string YLYPF(BKYLZL) { get; set; }
+/// <summary>
+/// 床位费总额
+/// <summary>
+public string CWFZE { get; set; }
+/// <summary>
+/// 参保主险种
+/// <summary>
+public string CBZXZ { get; set; }
+/// <summary>
+/// 参保经办机构
+/// <summary>
+public string CBJBJG { get; set; }
+/// <summary>
+/// 特检特治总费用(鄂尔多斯)(特检特治不进入统筹分段计算)
+/// <summary>
+public string TJTZZFY(EEDS)(TJTZBJRTCFDJS) { get; set; }
+/// <summary>
+/// 特检特治自付费用(鄂尔多斯)
+/// <summary>
+public string TJTZZFFY(EEDS) { get; set; }
+/// <summary>
+/// 门诊慢性病审批编号
+/// <summary>
+public string MZMXBSPBH { get; set; }
+/// <summary>
+/// 伙食补助应付(乌海)
+/// <summary>
+public string HSBZYF(WH) { get; set; }
+/// <summary>
+/// 伙食补助统筹支付(乌海)
+/// <summary>
+public string HSBZTCZF(WH) { get; set; }
+/// <summary>
+/// 伙食补助大额支付(乌海)
+/// <summary>
+public string HSBZDEZF(WH) { get; set; }
+/// <summary>
+/// 因封锁个人自付费用（鄂尔多斯）
+/// <summary>
+public string YFSGRZFFY（EEDS） { get; set; }
+/// <summary>
+/// 医院端统筹支付费用(包头)
+/// <summary>
+public string YYDTCZFFY(BT) { get; set; }
+/// <summary>
+/// 中心端统筹支付费用(包头)
+/// <summary>
+public string ZXDTCZFFY(BT) { get; set; }
+/// <summary>
+/// 医院端救助金支付费用(包头)
+/// <summary>
+public string YYDJZJZFFY(BT) { get; set; }
+/// <summary>
+/// 中心端救助金支付费用（包头）
+/// <summary>
+public string ZXDJZJZFFY（BT） { get; set; }
+/// <summary>
+/// 二次报销大额支付（锡盟）
+/// <summary>
+public string ECBXDEZF（XM） { get; set; }
+/// <summary>
+/// 大病二次报销金额（乌兰察布,乌海）
+/// <summary>
+public string DBECBXJE（WLCB,WH） { get; set; }
+/// <summary>
+/// 蒙中项目符合基本医疗费用
+/// <summary>
+public string MZXMFHJBYLFY { get; set; }
+/// <summary>
+/// 蒙中项目统筹支出费用
+/// <summary>
+public string MZXMTCZCFY { get; set; }
+/// <summary>
+/// 蒙中项目统筹自付比例（鄂尔多斯）
+/// <summary>
+public string MZXMTCZFBL（EEDS） { get; set; }
+/// <summary>
+/// 蒙中项目统筹支付比例（鄂尔多斯）
+/// <summary>
+public string MZXMTCZFBL（EEDS） { get; set; }
+/// <summary>
+/// 蒙中项目诊疗项目自付金额（鄂尔多斯）
+/// <summary>
+public string MZXMZLXMZFJE（EEDS） { get; set; }
+/// <summary>
+/// 居民大病补充医疗统筹支付费用（包头）
+/// <summary>
+public string JMDBBCYLTCZFFY（BT） { get; set; }
+/// <summary>
+/// 个人自付合规费用（包头）
+/// <summary>
+public string GRZFHGFY（BT） { get; set; }
+/// <summary>
+/// 门诊统筹起付线累计金额(包括本次)
+/// <summary>
+public string MZTCQFXLJJE(BKBC) { get; set; }
+/// <summary>
+/// 门诊统筹截至上次起伏线累计金额(呼市)
+/// <summary>
+public string MZTCJZSCQFXLJJE(HS) { get; set; }
+/// <summary>
+/// 可享受的门诊公补金额（只区本级能用）
+/// <summary>
+public string KXSDMZGBJE（ZQBJNY） { get; set; }
+/// <summary>
+/// 截止上次本年门诊就医公务员补助基金累计（ 只区本级能用）
+/// <summary>
+public string JZSCBNMZJYGWYBZJJLJ（ ZQBJNY） { get; set; }
+/// <summary>
+/// 本年门诊公务员补助基金累计包括本次（只区本级能用）
+/// <summary>
+public string BNMZGWYBZJJLJBKBC（ZQBJNY） { get; set; }
+/// <summary>
+/// 截至上次住院类符合基本医疗累计(呼市)
+/// <summary>
+public string JZSCZYLFHJBYLLJ(HS) { get; set; }
+/// <summary>
+/// 本年超大额公务员补助累计（包括本次）
+/// <summary>
+public string BNCDEGWYBZLJ（BKBC） { get; set; }
+/// <summary>
+/// 截至上次门慢起伏标准累计
+/// <summary>
+public string JZSCMMQFBZLJ { get; set; }
+/// <summary>
+/// 截至上次门慢基金支付累 计（仅通辽有）
+/// <summary>
+public string JZSCMMJJZFL J（JTLY） { get; set; }
+/// <summary>
+/// 截至上次大病合规费用累计（乌海）
+/// <summary>
+public string JZSCDBHGFYLJ（WH） { get; set; }
+/// <summary>
+/// 进入大病报销的特殊丙类药品(乌海)
+/// <summary>
+public string JRDBBXDTSBLYP(WH) { get; set; }
+/// <summary>
+/// 大病第一段支付金额(乌海)
+/// <summary>
+public string DBDYDZFJE(WH) { get; set; }
+/// <summary>
+/// 大病第二段支付金额(乌海)
+/// <summary>
+public string DBDEDZFJE(WH) { get; set; }
+/// <summary>
+/// 大病第三段支付金额(乌海)
+/// <summary>
+public string DBDSDZFJE(WH) { get; set; }
+/// <summary>
+/// 大病第四段支付金额(乌海)
+/// <summary>
+public string DBDSDZFJE(WH) { get; set; }
+/// <summary>
+/// 大病第一段自付金额(乌海)
+/// <summary>
+public string DBDYDZFJE(WH) { get; set; }
+/// <summary>
+/// 大病第二段自付金额(乌海)
+/// <summary>
+public string DBDEDZFJE(WH) { get; set; }
+/// <summary>
+/// 大病第三段自付金额(乌海)
+/// <summary>
+public string DBDSDZFJE(WH) { get; set; }
+/// <summary>
+/// 大病第四段自付金额(乌海)
+/// <summary>
+public string DBDSDZFJE(WH) { get; set; }
+/// <summary>
+/// 大病第一段支付比例(乌海)
+/// <summary>
+public string DBDYDZFBL(WH) { get; set; }
+/// <summary>
+/// 大病第二段支付比例(乌海)
+/// <summary>
+public string DBDEDZFBL(WH) { get; set; }
+/// <summary>
+/// 大病第三段支付比例(乌海)
+/// <summary>
+public string DBDSDZFBL(WH) { get; set; }
+/// <summary>
+/// 大病第四段支付比例(乌海)
+/// <summary>
+public string DBDSDZFBL(WH) { get; set; }
+/// <summary>
+/// 大病起付线累计(乌海)
+/// <summary>
+public string DBQFXLJ(WH) { get; set; }
+/// <summary>
+/// 本次支付起付线(乌海)
+/// <summary>
+public string BCZFQFX(WH) { get; set; }
+/// <summary>
+/// 跨省其他基金支付金额
+/// <summary>
+public string KSQTJJZFJE { get; set; }
+/// <summary>
+/// 累计合理自付金额（兴安盟居民）
+/// <summary>
+public string LJHLZFJE（XAMJM） { get; set; }
+/// <summary>
+/// 截止上次合理自付（兴安盟居民）
+/// <summary>
+public string JZSCHLZF（XAMJM） { get; set; }
+/// <summary>
+/// 扶贫商保基金支出（通辽）
+/// <summary>
+public string FPSBJJZC（TL） { get; set; }
+/// <summary>
+/// 民政商保基金支出（通辽）
+/// <summary>
+public string MZSBJJZC（TL） { get; set; }
+/// <summary>
+/// 民政基金支出（通辽）
+/// <summary>
+public string MZJJZC（TL） { get; set; }
+/// <summary>
+/// 政府大病兜底基金支出（通辽）
+/// <summary>
+public string ZFDBDDJJZC（TL） { get; set; }
+/// <summary>
+/// 截止上次民政救助住院类累计（通辽）
+/// <summary>
+public string JZSCMZJZZYLLJ（TL） { get; set; }
+/// <summary>
+/// 截止上次民政救助住院符合基本医疗累计（通辽）
+/// <summary>
+public string JZSCMZJZZYFHJBYLLJ（TL） { get; set; }
+/// <summary>
+/// 统筹超限额医院承担（乌海）
+/// <summary>
+public string TCCXEYYCD（WH） { get; set; }
+/// <summary>
+/// 自付超限额医院承担（乌海）
+/// <summary>
+public string ZFCXEYYCD（WH） { get; set; }
+/// <summary>
+/// 单病种标识（乌海）
+/// <summary>
+public string DBZBS（WH） { get; set; }
+/// <summary>
+/// 分级诊疗标志（乌海分级诊疗）
+/// <summary>
+public string FJZLBZ（WHFJZL） { get; set; }
+/// <summary>
+/// 医院奖励基本医疗费用（区本级）
+/// <summary>
+public string YYJLJBYLFY（QBJ） { get; set; }
