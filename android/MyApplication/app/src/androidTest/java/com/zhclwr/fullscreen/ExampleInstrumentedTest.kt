@@ -1,4 +1,4 @@
-package com.zhclwr.myapplication
+package com.zhclwr.fullscreen
 
 import androidx.test.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4

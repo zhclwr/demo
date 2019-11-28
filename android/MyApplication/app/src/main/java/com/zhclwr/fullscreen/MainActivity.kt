@@ -1,4 +1,4 @@
-package com.zhclwr.myapplication
+package com.zhclwr.fullscreen
 
 import android.app.ProgressDialog
 import android.content.Context
@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     lateinit var dialog: ProgressDialog
     lateinit var sp: SharedPreferences
-    var url = "http://49.234.151.237:9528/"
+    var url = "http://192.168.3.59/#/bed"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

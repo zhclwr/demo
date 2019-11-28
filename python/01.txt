@@ -1,0 +1,304 @@
+export async function GetMedicalCodeSettingType(payload:any) {
+	let res = await ajax.get(`/api/services/app/MedicalInsurance/GetMedicalCodeSettingType`, {params:payload})
+	return res.data.result
+}
+
+<style>
+	.ivu-form .ivu-form-item-label{
+		padding: 10px 0px 10px 0;
+	}
+	.ivu-table-cell {
+
+	}
+</style>
+<template>
+	<div>
+		<Card dis-hover>
+			<div class="page-body">
+				<Form ref="queryForm" :label-width="70" label-position="left" inline>
+					<Row>
+						<Col span="3">
+							<Input v-model="proName" placeholder="名称"/>
+						</Col>
+						<Col span="4">
+							<FormItem label="医保类型：" style="width:100%;margin-left:5px">
+								<Select v-model="medicareTypeId" style="width:100%; " :loading="medTypeLoading">
+									<Option v-for="item in medicalTypes" :value="item.id" :key="item.value">{{ item.text }}</Option>
+								</Select>
+							</FormItem>
+						</Col>
+						<Col span="4">
+							<FormItem label="类 型："  style="width:100%;margin-left:5px" :loading="typeLoading">
+								<Select v-model="type" >
+									<Option v-for="item in typeOptions" :value="item.value" :key="item.value">{{ item.text }}</Option>
+								</Select>
+							</FormItem>
+						</Col>
+					</Row>
+				</Form>
+				<div class="">
+					<Table :loading="table.loading" :columns="columns" :no-data-text="L('NoDatas')" border :data="list">
+					</Table>
+					<Page  class-name="fengpage" :total="table.totalCount" class="margin-top-10" @on-change="pageChange" :page-size="table.pageSize" :current="table.currentPage"></Page>
+				</div>
+			</div>
+		</Card>
+		<modal v-model="modalShow" v-if="modalShow" :data='modalData' />
+	</div>
+</template>
+<script lang="ts">
+    import AbpBase from '../../../lib/abpbase'
+    import { Component, Watch } from 'vue-property-decorator';
+    import {
+        CreateOrEditMedicareCode,
+        GetMedicalCodeSettingType,
+        MedicareCodeOfSpecialData
+    } from '../../../api/specialDictionary'
+    import modal from './modal.vue'
+    import {GetSysListByCode} from "@/api/configureDictionary"
+
+    @Component({
+        components:{modal}
+    })
+    export default class Project extends AbpBase {
+        /*
+        *   1. 进页面先获取医保类型 没获取到不继续
+        * 	2. 根据医保类型再获取可维护的类型（见 types）
+        *	3. 最后根据医保类型 和 可维护的类型来获取表格数据
+        * */
+        @Watch('proName')
+		@Watch('medicareTypeId')
+		watchMedicareTypeId(val: string, oldVal: string){
+            this.getType()
+		}
+        @Watch('type')
+        WatchType(val: string, oldVal: string) {
+            if (val) {
+                this.table.currentPage = 1
+                this.getData()
+			}
+        }
+        medTypeLoading = false
+        typeLoading = false
+        proName = ''//查询条件
+        list = []//table数据源
+        status = 1 //启用状态;
+        table = {
+            loading:false,
+            totalCount : 0,
+            pageSize : 10,
+            currentPage:1
+        }
+        type = null
+        types = {
+            1: {'text': '药品', 'value': 1},
+            2: {'text': '耗材', 'value': 2},
+            3: {'text': '项目', 'value': 3},
+            4: {'text': '人员', 'value': 4},
+            5: {'text': '部门', 'value': 5},
+            6: {'text': '疾病', 'value': 6},
+            7: {'text': '剂型', 'value': 7},
+            8: {'text': '药品类型', 'value': 8},
+            9: {'text': '医疗类别', 'value': 9},
+            10: {'text': '费用类别', 'value': 10}
+        }
+        medicareTypeId = null
+        typeOptions = []
+        medicalTypes = []
+        modalData = {}
+        modalShow = false
+        async created() {
+            await this.getMedType()
+        }
+        async getMedType() {
+            this.medTypeLoading = true
+            this.medicalTypes = (await GetSysListByCode({code: "17", strName: ''})).filter(item => item.text !== '自费')
+            if (this.medicalTypes.length) {
+               	this.medicareTypeId = this.medicalTypes[0].id
+            }
+            this.medTypeLoading = false
+        }
+        async getType() {
+            this.typeLoading = true
+            let res = await GetMedicalCodeSettingType({medicalTypeId: this.medicareTypeId})
+			this.typeOptions = []
+			res.data.forEach(item => {
+                this.typeOptions.push(this.types[item])
+			})
+			if (this.typeOptions.length) {
+			    this.type = this.typeOptions[0].value
+			} else {
+                this.type = null
+			    this.table.currentPage = 1
+				this.list = []
+			}
+			this.typeLoading = false
+		}
+        async getData(){
+            this.table.loading = true
+            let payload = {
+                name:this.proName,
+                medicareTypeId: this.medicareTypeId,
+                medicareSpecial:this.type,
+                pageSize:this.table.pageSize,
+                Page:this.table.currentPage
+            }
+            let response = await MedicareCodeOfSpecialData(payload)
+            this.list = response.data.items.map((item:any)=>{
+                if(item.medicareSpecialType==1 || item.medicareSpecialType==2){
+                    item.name = item.name+`(${item.model})`
+                }
+                item.$isEdit = false
+                item.medicareSpecialName = this.typeOptions.find((v:any)=>{return v.value == item.medicareSpecialType}).text
+                return item;
+            })
+
+            this.table.totalCount = response.data.totalCount
+            this.table.loading = false
+        }
+        pageChange(page: number) {
+            this.table.currentPage = page
+            this.getData()
+        }
+        columns = [
+            {
+                title: "类型",
+                key: 'medicareSpecialName'
+            },
+            {
+                title: "名称",
+                key:'name',
+            },
+            {
+                title: "备注",
+                key:'remark',
+            },
+            {
+                title: "医保名称",
+                render:(h: any, p: any) => {
+                    return h('Input',{
+                        props: {
+                            value: p.row.medicareName
+                        },
+                        on: {
+                            input: function (event) {
+                                p.row.$isEdit = true
+                                p.row.medicareName = event
+                            }
+                        },
+                    },[
+                        h('i',{
+                            slot: 'append',
+                            class: {
+                                'iconfont': true
+                            },
+                            style:{
+                                'font-size': '10px'
+                            },
+
+                            domProps: {
+                                innerHTML: p.row.$isEdit ? '&#xe602;' : '&#xe611;'
+                            }
+                        })
+                    ])
+                }
+            },
+            {
+                title: "医保编码",
+                render:(h: any, p: any) => {
+                    return h('Input',{
+                        props: {
+                            value: p.row.medicareCode
+                        },
+                        on: {
+                            input: function (event) {
+                                p.row.$isEdit = true
+                                p.row.medicareCode = event
+                            }
+                        },
+                    },[
+                        h('i',{
+                            slot: 'append',
+                            class: {
+                                'iconfont': true
+                            },
+                            style:{
+                                'font-size': '10px'
+                            },
+
+                            domProps: {
+                                innerHTML: p.row.$isEdit ? '&#xe602;' : '&#xe611;'
+                            }
+                        })
+                    ])
+                }
+            },
+            {
+                title: this.L('Actions'),
+                key: 'Actions',
+                width: 170,
+                render: (h: any, params: any) => {
+                    return h('div', [
+                        h('Button', {
+                            props: {
+                                type: 'primary',
+                                size: 'small'
+                            },
+                            style: {
+                                marginRight: '5px'
+                            },
+                            on: {
+                                click: () => {
+                                    this.manage(params.row)
+                                }
+                            }
+                        },'医保编码维护'),
+                        h('Button', {
+                            props: {
+                                type: 'primary',
+                                size: 'small'
+                            },
+                            style: {
+                                // marginRight: '5px'
+                            },
+                            on: {
+                                click: () => {
+                                    this.save(params.row)
+                                }
+                            }
+                        },'保存'),
+                    ])
+                }
+            }
+        ]
+        async save(row: any) {
+			if (!row.medicareName || !row.medicareCode) {
+			    this.$Message.error("请填写完整！")
+				return
+			}
+            let data  = {
+                dataType: row.medicareSpecialType,
+                medicareTypeId: this.medicareTypeId,
+                medicareCode: row.medicareCode,
+                medicareName: row.medicareName,
+                dataId: row.dataId,
+                id: row.id,
+            }
+            let res = await CreateOrEditMedicareCode(data)
+            if(res.code == 2000){
+                this.getData()
+            }
+            this.$Message.info(res.message)
+		}
+        manage(row:any){
+            this.modalShow = true
+            this.modalData = row
+        }
+    }
+</script>
+<style scoped>
+	.ml-15{
+		margin-left: 15px
+	}
+
+</style>

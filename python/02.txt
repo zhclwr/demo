@@ -1,0 +1,266 @@
+<template>
+    <div>
+        <Modal
+         :title="data.name"
+         :value="value"
+         @on-visible-change="visibleChange"
+         footer-hide
+         width='1200px'
+        >
+            <Table :columns="columns"  border :data="list"></Table>
+            <Button :disabled='selFlag' type="dashed" icon='md-add' style="width:100%;margin:10px 0;" @click="add">新增</Button>
+        </Modal>
+    </div>
+</template>
+<script lang="ts">
+    import { Component, Vue,Inject, Prop,Watch } from 'vue-property-decorator';
+    import Util from '../../../lib/util'
+    import AbpBase from '../../../lib/abpbase'
+    import {QueryMedicareCode,CreateOrEditMedicareCode,DeleteMedicareCode} from '../../../api/specialDictionary'
+
+
+    @Component
+    export default class Model extends AbpBase{
+        @Prop({type:Boolean,default:false}) value:boolean;
+        @Prop({type:Object,default:{}}) data:any;
+
+        list = []
+        async created(){
+            await this.getSelect()
+            this.renderColums()
+            this.getData()
+        }
+        add(){
+            this.selFlag = true
+            this.selRow = {
+                id:null,
+                medicareTypeId:null,
+                medicareCode:'',
+                $isEdit:true,
+                medicareName: '',
+            }
+            this.list.push(this.selRow)
+        }
+        medicalInsuranceTypes = []
+        async getSelect(){
+            this.medicalInsuranceTypes = await this.$store.dispatch({
+                type:'dictionaries/GetListByCode',
+                data:{strCode:'17'},
+            })
+        }
+        //保存loading,避免重复提交
+        loading = false
+        save(){
+
+        }
+        async getData(){
+            this.loading = true
+            this.selFlag = false
+            console.log(this.data)
+            let data = {
+                dataId:this.data.dataId,
+                medicareSpecial:this.data.medicareSpecialType,
+            }
+            let res = await QueryMedicareCode(data)
+            this.list = res.data.map((item:any)=>{
+                item.$isEdit = false
+                return item
+            })
+            this.loading = false
+        }
+        cancel(){
+            (this.$refs.ruleForm as any).resetFields();
+            this.$emit('input',false);
+        }
+        visibleChange(value:boolean){
+            if(!value){
+                this.$emit('input',value);
+            }else{
+            }
+        }
+        selFlag = false
+        selRow:any = {
+            id:null,
+            medicareTypeId:null,
+            medicareCode:'',
+            $isEdit:true,
+            medicareName: '',
+        }
+        renderColums(){
+            this.columns = [
+                {
+                    title: '医保类型',
+                    key: 'medicareTypeId',
+                    render: (h, params) => {
+                        let vm = this;
+                        if (params.row.$isEdit) {
+                            return h('Select', {
+                                props: {
+                                    value: this.selRow.medicareTypeId,
+                                    transfer:true,
+                                },
+                                on: {
+                                    'on-change': function (event) {
+                                        vm.selRow.medicareTypeId = event
+                                    }
+                                }
+                            },this.medicalInsuranceTypes.map((obj)=>{
+                                return h('Option', {
+                                    props: {
+                                        value: obj.id,
+                                        label: obj.text
+                                    }
+                            });
+                        }))
+                        } else  {
+                            return h('div', vm.medicalInsuranceTypes.find((item:any)=>{return item.id == params.row.medicareTypeId}).text);
+                        }
+                    }
+                },
+                {
+                    title: '医保名称',
+                    key: 'medicareName',
+                    render: (h, params) => {
+                        let vm = this;
+                        if (params.row.$isEdit) {
+                            return h('Input', {
+                                props: {
+                                    value: this.selRow.medicareName
+                                },
+                                on: {
+                                    input: function (event) {
+                                        vm.selRow.medicareName = event
+                                    }
+                                }
+                            });
+                        } else  {
+                            return h('div', params.row.medicareName);
+                        }
+                    }
+                },
+                {
+                    title: '医保编码',
+                    key: 'medicareCode',
+                    render: (h, params) => {
+                        let vm = this;
+                        if (params.row.$isEdit) {
+                            return h('Input', {
+                                props: {
+                                    value: this.selRow.medicareCode
+                                },
+                                on: {
+                                    input: function (event) {
+                                        vm.selRow.medicareCode = event
+                                    }
+                                }
+                            });
+                        } else  {
+                            return h('div', params.row.medicareCode);
+                        }
+                    }
+                },
+                {
+                    title: '操作',
+                    key: 'action',
+                    width:180,
+                    render: (h, params) => {
+                        return h('div',[
+                            h('Button', {
+                                props: {
+                                    type: 'primary',
+                                    size: 'small',
+                                    disabled:!params.row.$isEdit && this.selFlag
+                                },
+                                style:{
+                                    marginRight:'10px'
+                                },
+                                on: {
+                                    click: () => {
+                                        if (params.row.$isEdit) {
+                                            this.handleSave(params.row)
+                                        } else {
+                                            this.handleEdit(params.row)
+                                        }
+                                    }
+                                }
+                            }, params.row.$isEdit ? '保存' : '编辑'),
+                            h('Poptip', {
+                                props: {
+                                    confirm: true,
+                                    title:'您确认删除这条内容吗？',
+                                    size: 'small',
+                                    transfer:true,
+                                },
+                                on: {
+                                    'on-ok': () => {
+                                        this.remove(params.row)
+                                    }
+                                }
+                            },[
+                                h('Button', {
+                                    props: {
+                                        type: 'error',
+                                        size: 'small',
+                                        disabled:!params.row.$isEdit && this.selFlag
+                                    },
+                                },'删除')
+                            ])
+                        ])
+                    }
+                }
+            ]
+        }
+        columns = []
+        async handleSave(row:any){
+            console.log(this.selRow)
+            if(!this.selRow.medicareTypeId || this.selRow.medicareCode==''){
+                this.$Message.info('请填写完整')
+                return false
+            }
+            // this.$set(row, '$isEdit', false)
+			let data  = {
+                dataType:this.data.medicareSpecialType,
+                medicareTypeId:this.selRow.medicareTypeId,
+                medicareCode:this.selRow.medicareCode,
+                medicareName: this.selRow.medicareName,
+                dataId:this.data.id,
+                id:this.selRow.id,
+            }
+            let res = await CreateOrEditMedicareCode(data)
+            if(res.code == 2000){
+                this.getData()
+            }
+            this.$Message.info(res.message)
+        }
+        handleEdit(row:any){
+            this.selFlag = true
+            this.selRow = JSON.parse(JSON.stringify(row));
+            this.$set(row, '$isEdit', true)
+        }
+        async remove(row:any){
+            this.selFlag = false
+            if(!row.id){
+                this.list.splice(row._index,1)
+            }else{
+                let res = await DeleteMedicareCode({Id:row.id})
+                if(res.code == 2000){
+                    this.getData()
+                }
+                this.$Message.info(res.message)
+            }
+        }
+    }
+</script>
+
+
+
+
+@font-face {
+	font-family: 'iconfont';  /* project id 935407 */
+	src: url('//at.alicdn.com/t/font_935407_wg4wj3py1u.eot');
+	src: url('//at.alicdn.com/t/font_935407_wg4wj3py1u.eot?#iefix') format('embedded-opentype'),
+	url('//at.alicdn.com/t/font_935407_wg4wj3py1u.woff2') format('woff2'),
+	url('//at.alicdn.com/t/font_935407_wg4wj3py1u.woff') format('woff'),
+	url('//at.alicdn.com/t/font_935407_wg4wj3py1u.ttf') format('truetype'),
+	url('//at.alicdn.com/t/font_935407_wg4wj3py1u.svg#iconfont') format('svg');
+}

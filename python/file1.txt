@@ -1,700 +1,201 @@
-/// <summary>
-/// µ¥¾İºÅ
-/// <summary>
-public string DJH { get; set; }
-/// <summary>
-/// ±¾´Î×¡Ôº´ÎÊı
-/// <summary>
-public string BCZYCS { get; set; }
-/// <summary>
-/// Éç±£¾­°ìÊ±¼ä
-/// <summary>
-public string SBJBSJ { get; set; }
-/// <summary>
-/// Ò½ÁÆ·Ñ×Ü·ÑÓÃ
-/// <summary>
-public string YLFZFY { get; set; }
-/// <summary>
-/// ×Ô·Ñ·ÑÓÃ
-/// <summary>
-public string ZFFY { get; set; }
-/// <summary>
-/// ±¾´ÎÕÊ»§Ö§¸¶
-/// <summary>
-public string BCZHZF { get; set; }
-/// <summary>
-/// Í³³ïÖ§³ö
-/// <summary>
-public string TCZC { get; set; }
-/// <summary>
-/// ¾ÈÖú½ğÖ§¸¶½ğ¶î
-/// <summary>
-public string JZJZFJE { get; set; }
-/// <summary>
-/// ¹«ÎñÔ±²¹ÖúÖ§¸¶½ğ¶î
-/// <summary>
-public string GWYBZZFJE { get; set; }
-/// <summary>
-/// ÆóÒµ²¹³äÖ§¸¶½ğ¶î
-/// <summary>
-public string QYBCZFJE { get; set; }
-/// <summary>
-/// ¸öÈËÏÖ½ğÖ§¸¶
-/// <summary>
-public string GRXJZF { get; set; }
-/// <summary>
-/// ÒÒÀà×ÔÀí½ğ¶î
-/// <summary>
-public string YLZLJE { get; set; }
-/// <summary>
-/// ÒÒÀàÒ©Æ·×ÔÀí
-/// <summary>
-public string YLYPZL { get; set; }
-/// <summary>
-/// ÒÒÀàÕïÁÆ×ÔÀí
-/// <summary>
-public string YLZLZL { get; set; }
-/// <summary>
-/// ³¬ÏŞ¼Û×Ô¸¶·ÑÓÃ
-/// <summary>
-public string CXJZFFY { get; set; }
-/// <summary>
-/// ·ûºÏ»ù±¾Ò½ÁÆ·ÑÓÃ
-/// <summary>
-public string FHJBYLFY { get; set; }
-/// <summary>
-/// Æğ¸¶±ê×¼×Ô¸¶
-/// <summary>
-public string QFBZZF { get; set; }
-/// <summary>
-/// ½øÈëÍ³³ï·ÑÓÃ
-/// <summary>
-public string JRTCFY { get; set; }
-/// <summary>
-/// Í³³ï·Ö¶Î×Ô¸¶
-/// <summary>
-public string TCFDZF { get; set; }
-/// <summary>
-/// ½øÈë¾ÈÖú½ğ·ÑÓÃ
-/// <summary>
-public string JRJZJFY { get; set; }
-/// <summary>
-/// ¾ÈÖú½ğ×Ô¸¶
-/// <summary>
-public string JZJZF { get; set; }
-/// <summary>
-/// ×ªÕïÏÈ×Ô¸¶
-/// <summary>
-public string ZZXZF { get; set; }
-/// <summary>
-/// ³¬¹ı¾ÈÖú½ğ·â¶¥Ïß¸öÈË×Ô¸¶½ğ¶î
-/// <summary>
-public string CGJZJFDXGRZFJE { get; set; }
-/// <summary>
-/// ÃÅÕïÍ³³ï·ÑÓÃ
-/// <summary>
-public string MZTCFY { get; set; }
-/// <summary>
-/// Ò»´ÎĞÔ²ÄÁÏ·ÑÓÃ
-/// <summary>
-public string YCXCLFY { get; set; }
-/// <summary>
-/// Ò©Æ··ÑÓÃ
-/// <summary>
-public string YPFY { get; set; }
-/// <summary>
-/// ÕïÁÆÏîÄ¿·ÑÓÃ
-/// <summary>
-public string ZLXMFY { get; set; }
-/// <summary>
-/// ·şÎñÉèÊ©·ÑÓÃ
-/// <summary>
-public string FWSSFY { get; set; }
-/// <summary>
-/// Í³³ïÖ§¸¶µÚÒ»¶Î
-/// <summary>
-public string TCZFDYD { get; set; }
-/// <summary>
-/// Í³³ïÖ§¸¶µÚ¶ş¶Î
-/// <summary>
-public string TCZFDED { get; set; }
-/// <summary>
-/// Í³³ïÖ§¸¶µÚÈı¶Î
-/// <summary>
-public string TCZFDSD { get; set; }
-/// <summary>
-/// Í³³ïÖ§¸¶µÚËÄ¶Î
-/// <summary>
-public string TCZFDSD { get; set; }
-/// <summary>
-/// ¶şÒÒÃñÕş²¹ÖúÖ§³ö
-/// <summary>
-public string EYMZBZZC { get; set; }
-/// <summary>
-/// ÓÅ¸§ÈËÔ±²ÆÕş»ù½ğÖ§¸¶
-/// <summary>
-public string YFRYCZJJZF { get; set; }
-/// <summary>
-/// ¶¨µãÒ½ÁÆ»ú¹¹Ö§¸¶
-/// <summary>
-public string DDYLJGZF { get; set; }
-/// <summary>
-/// ÌØ¼ìÌØÖÎÍ³³ïÖ§¸¶
-/// <summary>
-public string TJTZTCZF { get; set; }
-/// <summary>
-/// ÕË»§Óà¶î
-/// <summary>
-public string ZHYE { get; set; }
-/// <summary>
-/// ½ØÖ¹ÉÏ´ÎÃÅÕïÍ³³ï·ÑÓÃÀÛ¼Æ
-/// <summary>
-public string JZSCMZTCFYLJ { get; set; }
-/// <summary>
-/// µÚÒ»¶Î¸öÈË×Ô¸¶
-/// <summary>
-public string DYDGRZF { get; set; }
-/// <summary>
-/// µÚ¶ş¶Î¸öÈË×Ô¸¶
-/// <summary>
-public string DEDGRZF { get; set; }
-/// <summary>
-/// µÚÈı¶Î¸öÈË×Ô¸¶
-/// <summary>
-public string DSDGRZF { get; set; }
-/// <summary>
-/// µÚËÄ¶Î¸öÈË×Ô¸¶
-/// <summary>
-public string DSDGRZF { get; set; }
-/// <summary>
-/// ²Î¼Ó¹¤×÷ÈÕÆÚ
-/// <summary>
-public string CJGZRQ { get; set; }
-/// <summary>
-/// ×Ô¸¶·ÑÓÃ
-/// <summary>
-public string ZFFY { get; set; }
-/// <summary>
-/// µÚÒ»¶Î·Ö¶ÎÏÂÏŞ
-/// <summary>
-public string DYDFDXX { get; set; }
-/// <summary>
-/// µÚÒ»¶Î·Ö¶ÎÉÏÏŞ
-/// <summary>
-public string DYDFDSX { get; set; }
-/// <summary>
-/// µÚÒ»¶Î·Ö¶Î»ù½ğÖ§¸¶±ÈÀı
-/// <summary>
-public string DYDFDJJZFBL { get; set; }
-/// <summary>
-/// µÚÒ»¶Î·Ö¶Î×Ô¸¶±ÈÀı
-/// <summary>
-public string DYDFDZFBL { get; set; }
-/// <summary>
-/// µÚ¶ş¶Î·Ö¶ÎÏÂÏŞ
-/// <summary>
-public string DEDFDXX { get; set; }
-/// <summary>
-/// µÚ¶ş¶Î·Ö¶ÎÉÏÏŞ
-/// <summary>
-public string DEDFDSX { get; set; }
-/// <summary>
-/// µÚ¶ş¶Î·Ö¶Î»ù½ğÖ§¸¶±ÈÀı
-/// <summary>
-public string DEDFDJJZFBL { get; set; }
-/// <summary>
-/// µÚ¶ş¶Î·Ö¶Î×Ô¸¶±ÈÀı
-/// <summary>
-public string DEDFDZFBL { get; set; }
-/// <summary>
-/// µÚÈı¶Î·Ö¶ÎÏÂÏŞ
-/// <summary>
-public string DSDFDXX { get; set; }
-/// <summary>
-/// µÚÈı¶Î·Ö¶ÎÉÏÏŞ
-/// <summary>
-public string DSDFDSX { get; set; }
-/// <summary>
-/// µÚÈı¶Î·Ö¶Î»ù½ğÖ§¸¶±ÈÀı
-/// <summary>
-public string DSDFDJJZFBL { get; set; }
-/// <summary>
-/// µÚÈı¶Î·Ö¶Î×Ô¸¶±ÈÀı
-/// <summary>
-public string DSDFDZFBL { get; set; }
-/// <summary>
-/// µÚËÄ¶Î·Ö¶ÎÏÂÏŞ
-/// <summary>
-public string DSDFDXX { get; set; }
-/// <summary>
-/// µÚËÄ¶Î·Ö¶ÎÉÏÏŞ
-/// <summary>
-public string DSDFDSX { get; set; }
-/// <summary>
-/// µÚËÄ¶Î·Ö¶Î»ù½ğÖ§¸¶±ÈÀı
-/// <summary>
-public string DSDFDJJZFBL { get; set; }
-/// <summary>
-/// µÚËÄ¶Î·Ö¶Î×Ô¸¶±ÈÀı
-/// <summary>
-public string DSDFDZFBL { get; set; }
-/// <summary>
-/// µÚÎå¶Î·Ö¶ÎÏÂÏŞ
-/// <summary>
-public string DWDFDXX { get; set; }
-/// <summary>
-/// µÚÎå¶Î·Ö¶ÎÉÏÏŞ
-/// <summary>
-public string DWDFDSX { get; set; }
-/// <summary>
-/// µÚÎå¶Î·Ö¶Î»ù½ğÖ§¸¶±ÈÀı
-/// <summary>
-public string DWDFDJJZFBL { get; set; }
-/// <summary>
-/// µÚÎå¶Î·Ö¶Î×Ô¸¶±ÈÀı
-/// <summary>
-public string DWDFDZFBL { get; set; }
-/// <summary>
-/// ½ØÖÁÉÏ´Î±¾Äê·ûºÏ»ù±¾Ò½ÁÆÀÛ¼Æ
-/// <summary>
-public string JZSCBNFHJBYLLJ { get; set; }
-/// <summary>
-/// ½ØÖÁÉÏ´Î±¾Äê»ù±¾Ò½ÁÆÍ³³ïÀÛ¼Æ
-/// <summary>
-public string JZSCBNJBYLTCLJ { get; set; }
-/// <summary>
-/// µ¥Î»Ãû³Æ
-/// <summary>
-public string DWMC { get; set; }
-/// <summary>
-/// »ù²ĞÈËÔ±±êÖ¾
-/// <summary>
-public string JCRYBZ { get; set; }
-/// <summary>
-/// ½ØÖÁÉÏ´Î±¾Äê×¡Ôº´ÎÊı
-/// <summary>
-public string JZSCBNZYCS { get; set; }
-/// <summary>
-/// ±¾ÄêÃÅÕïÍ³³ïÀÛ¼Æ(°üÀ¨±¾´Î)
-/// <summary>
-public string BNMZTCLJ(BKBC) { get; set; }
-/// <summary>
-/// ±¾Äê·ûºÏ»ù±¾Ò½ÁÆÀÛ¼Æ(°üÀ¨±¾´Î)
-/// <summary>
-public string BNFHJBYLLJ(BKBC) { get; set; }
-/// <summary>
-/// ±¾Äê»ù±¾Ò½ÁÆÍ³³ïÀÛ¼Æ(°üÀ¨±¾´Î)
-/// <summary>
-public string BNJBYLTCLJ(BKBC) { get; set; }
-/// <summary>
-/// ±¾ÄêÃÅÕïÂıĞÔ²¡Í³³ïÀÛ¼Æ
-/// <summary>
-public string BNMZMXBTCLJ { get; set; }
-/// <summary>
-/// ±¾ÄêÃÅÕïÂıĞÔ²¡Í³³ïÀÛ¼ÆºÍ
-/// <summary>
-public string BNMZMXBTCLJH { get; set; }
-/// <summary>
-/// Ò½ÔºÄÚ²¿×¡ÔººÅ
-/// <summary>
-public string YYNBZYH { get; set; }
-/// <summary>
-/// µ¥Î»ÀàĞÍ
-/// <summary>
-public string DWLX { get; set; }
-/// <summary>
-/// ÒÒÀàÒ©Æ·×Ô¸¶
-/// <summary>
-public string YLYPZF { get; set; }
-/// <summary>
-/// ÒÒÀàÕïÁÆ×Ô¸¶
-/// <summary>
-public string YLZLZF { get; set; }
-/// <summary>
-/// ×Ô·ÑÒ©Æ·½ğ¶î
-/// <summary>
-public string ZFYPJE { get; set; }
-/// <summary>
-/// »ù±¾Ò½ÁÆ¹«²¹±ÈÀı
-/// <summary>
-public string JBYLGBBL { get; set; }
-/// <summary>
-/// ´ó¶î¹«²¹±ÈÀı
-/// <summary>
-public string DEGBBL { get; set; }
-/// <summary>
-/// Ê×´Î²Î±£ÈÕÆÚ
-/// <summary>
-public string SCCBRQ { get; set; }
-/// <summary>
-/// ĞĞÕşÖ°Îñ
-/// <summary>
-public string XZZW { get; set; }
-/// <summary>
-/// ½ØÖ¹ÉÏ´Î±¾Äê¾ÈÖú½ğÀÛ¼Æ
-/// <summary>
-public string JZSCBNJZJLJ { get; set; }
-/// <summary>
-/// ±¾Äê¾ÈÖú½ğÀÛ¼Æ(°üÀ¨±¾´Î)
-/// <summary>
-public string BNJZJLJ(BKBC) { get; set; }
-/// <summary>
-/// ½ØÖ¹ÉÏ´Î±¾Äê¹«ÎñÔ±²¹Öú»ù½ğÀÛ¼Æ
-/// <summary>
-public string JZSCBNGWYBZJJLJ { get; set; }
-/// <summary>
-/// ±¾Äê¹«ÎñÔ±²¹Öú»ù½ğÀÛ¼Æ(°üÀ¨±¾´Î)
-/// <summary>
-public string BNGWYBZJJLJ(BKBC) { get; set; }
-/// <summary>
-/// ¹«²¹µÚÒ»¶ÎÖ§¸¶
-/// <summary>
-public string GBDYDZF { get; set; }
-/// <summary>
-/// ¹«²¹µÚ¶ş¶ÎÖ§¸¶
-/// <summary>
-public string GBDEDZF { get; set; }
-/// <summary>
-/// ¹«²¹µÚÈı¶ÎÖ§¸¶
-/// <summary>
-public string GBDSDZF { get; set; }
-/// <summary>
-/// Í³³ï¹«ÎñÔ±²¹Öú½ğ¶î
-/// <summary>
-public string TCGWYBZJE { get; set; }
-/// <summary>
-/// ´ó¶î¹«ÎñÔ±²¹Öú½ğ¶î
-/// <summary>
-public string DEGWYBZJE { get; set; }
-/// <summary>
-/// ³¬´ó¶î¹«ÎñÔ±²¹Öú½ğ¶î
-/// <summary>
-public string CDEGWYBZJE { get; set; }
-/// <summary>
-/// ÒÒÀà·ÑÓÃ
-/// <summary>
-public string YLFY { get; set; }
-/// <summary>
-/// ÒÒÀàÍ³³ïÖ§¸¶½ğ¶î
-/// <summary>
-public string YLTCZFJE { get; set; }
-/// <summary>
-/// ÒÒÀà¾ÈÖú½ğÖ§¸¶½ğ¶î
-/// <summary>
-public string YLJZJZFJE { get; set; }
-/// <summary>
-/// ³¬´ó¶î¹«²¹¿É±¨Ïú·ÑÓÃ
-/// <summary>
-public string CDEGBKBXFY { get; set; }
-/// <summary>
-/// ³¬´ó¶î¹«²¹Ö§¸¶
-/// <summary>
-public string CDEGBZF { get; set; }
-/// <summary>
-/// ÌØ¼ìÌØÖÎ·ÑÓÃ£¨°ÍÃË£©(ÌØ¼ìÌØÖÎ½øÈëÍ³³ï·Ö¶Î¼ÆËã)
-/// <summary>
-public string TJTZFY£¨BM£©(TJTZJRTCFDJS) { get; set; }
-/// <summary>
-/// ÌØ¼ìÌØÖÎ´ó¶îÖ§¸¶
-/// <summary>
-public string TJTZDEZF { get; set; }
-/// <summary>
-/// ½ØÖ¹ÉÏ´Î±¾ÄêÒ½ÁÆ·Ñ×Ü¶îÀÛ¼Æ
-/// <summary>
-public string JZSCBNYLFZELJ { get; set; }
-/// <summary>
-/// ±¾ÄêÒ½ÁÆ·Ñ×Ü¶îÀÛ¼Æ£¨°üÀ¨±¾´Î£©
-/// <summary>
-public string BNYLFZELJ£¨BKBC£© { get; set; }
-/// <summary>
-/// ½ØÖ¹ÉÏ´Î±¾ÄêÕË»§Ö§¸¶ÀÛ¼Æ
-/// <summary>
-public string JZSCBNZHZFLJ { get; set; }
-/// <summary>
-/// ±¾ÄêÕË»§Ö§¸¶ÀÛ¼Æ£¨°üÀ¨±¾´Î£©
-/// <summary>
-public string BNZHZFLJ£¨BKBC£© { get; set; }
-/// <summary>
-/// ½ØÖ¹ÉÏ´Î±¾Äê½øÈëÍ³³ïÀÛ¼Æ½ğ¶î
-/// <summary>
-public string JZSCBNJRTCLJJE { get; set; }
-/// <summary>
-/// ±¾Äê½øÈëÍ³³ïÀÛ¼Æ½ğ¶î(°üÀ¨±¾´Î)
-/// <summary>
-public string BNJRTCLJJE(BKBC) { get; set; }
-/// <summary>
-/// ½ØÖ¹ÉÏ´Î±¾Äê½øÈë´ó¶îÀÛ¼Æ½ğ¶î
-/// <summary>
-public string JZSCBNJRDELJJE { get; set; }
-/// <summary>
-/// ±¾Äê½øÈë´ó¶îÀÛ¼Æ½ğ¶î(°üÀ¨±¾´Î)
-/// <summary>
-public string BNJRDELJJE(BKBC) { get; set; }
-/// <summary>
-/// ½ØÖ¹ÉÏ´Î±¾Äê³¬´ó¶î·â¶¥ÀÛ¼Æ½ğ¶î
-/// <summary>
-public string JZSCBNCDEFDLJJE { get; set; }
-/// <summary>
-/// ±¾Äê³¬´ó¶î·â¶¥ÀÛ¼Æ½ğ¶î(°üÀ¨±¾´Î)
-/// <summary>
-public string BNCDEFDLJJE(BKBC) { get; set; }
-/// <summary>
-/// ´²Î»·ÑÍ³³ïÖ§¸¶£¨ÎÚº££©
-/// <summary>
-public string CWFTCZF£¨WH£© { get; set; }
-/// <summary>
-/// ¼×ÀàÒ©Æ··Ñ
-/// <summary>
-public string JLYPF { get; set; }
-/// <summary>
-/// ÒÒÀàÒ©Æ··Ñ(°üÀ¨ÒÒÀà×ÔÀí)
-/// <summary>
-public string YLYPF(BKYLZL) { get; set; }
-/// <summary>
-/// ´²Î»·Ñ×Ü¶î
-/// <summary>
-public string CWFZE { get; set; }
-/// <summary>
-/// ²Î±£Ö÷ÏÕÖÖ
-/// <summary>
-public string CBZXZ { get; set; }
-/// <summary>
-/// ²Î±£¾­°ì»ú¹¹
-/// <summary>
-public string CBJBJG { get; set; }
-/// <summary>
-/// ÌØ¼ìÌØÖÎ×Ü·ÑÓÃ(¶õ¶û¶àË¹)(ÌØ¼ìÌØÖÎ²»½øÈëÍ³³ï·Ö¶Î¼ÆËã)
-/// <summary>
-public string TJTZZFY(EEDS)(TJTZBJRTCFDJS) { get; set; }
-/// <summary>
-/// ÌØ¼ìÌØÖÎ×Ô¸¶·ÑÓÃ(¶õ¶û¶àË¹)
-/// <summary>
-public string TJTZZFFY(EEDS) { get; set; }
-/// <summary>
-/// ÃÅÕïÂıĞÔ²¡ÉóÅú±àºÅ
-/// <summary>
-public string MZMXBSPBH { get; set; }
-/// <summary>
-/// »ïÊ³²¹ÖúÓ¦¸¶(ÎÚº£)
-/// <summary>
-public string HSBZYF(WH) { get; set; }
-/// <summary>
-/// »ïÊ³²¹ÖúÍ³³ïÖ§¸¶(ÎÚº£)
-/// <summary>
-public string HSBZTCZF(WH) { get; set; }
-/// <summary>
-/// »ïÊ³²¹Öú´ó¶îÖ§¸¶(ÎÚº£)
-/// <summary>
-public string HSBZDEZF(WH) { get; set; }
-/// <summary>
-/// Òò·âËø¸öÈË×Ô¸¶·ÑÓÃ£¨¶õ¶û¶àË¹£©
-/// <summary>
-public string YFSGRZFFY£¨EEDS£© { get; set; }
-/// <summary>
-/// Ò½Ôº¶ËÍ³³ïÖ§¸¶·ÑÓÃ(°üÍ·)
-/// <summary>
-public string YYDTCZFFY(BT) { get; set; }
-/// <summary>
-/// ÖĞĞÄ¶ËÍ³³ïÖ§¸¶·ÑÓÃ(°üÍ·)
-/// <summary>
-public string ZXDTCZFFY(BT) { get; set; }
-/// <summary>
-/// Ò½Ôº¶Ë¾ÈÖú½ğÖ§¸¶·ÑÓÃ(°üÍ·)
-/// <summary>
-public string YYDJZJZFFY(BT) { get; set; }
-/// <summary>
-/// ÖĞĞÄ¶Ë¾ÈÖú½ğÖ§¸¶·ÑÓÃ£¨°üÍ·£©
-/// <summary>
-public string ZXDJZJZFFY£¨BT£© { get; set; }
-/// <summary>
-/// ¶ş´Î±¨Ïú´ó¶îÖ§¸¶£¨ÎıÃË£©
-/// <summary>
-public string ECBXDEZF£¨XM£© { get; set; }
-/// <summary>
-/// ´ó²¡¶ş´Î±¨Ïú½ğ¶î£¨ÎÚÀ¼²ì²¼,ÎÚº££©
-/// <summary>
-public string DBECBXJE£¨WLCB,WH£© { get; set; }
-/// <summary>
-/// ÃÉÖĞÏîÄ¿·ûºÏ»ù±¾Ò½ÁÆ·ÑÓÃ
-/// <summary>
-public string MZXMFHJBYLFY { get; set; }
-/// <summary>
-/// ÃÉÖĞÏîÄ¿Í³³ïÖ§³ö·ÑÓÃ
-/// <summary>
-public string MZXMTCZCFY { get; set; }
-/// <summary>
-/// ÃÉÖĞÏîÄ¿Í³³ï×Ô¸¶±ÈÀı£¨¶õ¶û¶àË¹£©
-/// <summary>
-public string MZXMTCZFBL£¨EEDS£© { get; set; }
-/// <summary>
-/// ÃÉÖĞÏîÄ¿Í³³ïÖ§¸¶±ÈÀı£¨¶õ¶û¶àË¹£©
-/// <summary>
-public string MZXMTCZFBL£¨EEDS£© { get; set; }
-/// <summary>
-/// ÃÉÖĞÏîÄ¿ÕïÁÆÏîÄ¿×Ô¸¶½ğ¶î£¨¶õ¶û¶àË¹£©
-/// <summary>
-public string MZXMZLXMZFJE£¨EEDS£© { get; set; }
-/// <summary>
-/// ¾ÓÃñ´ó²¡²¹³äÒ½ÁÆÍ³³ïÖ§¸¶·ÑÓÃ£¨°üÍ·£©
-/// <summary>
-public string JMDBBCYLTCZFFY£¨BT£© { get; set; }
-/// <summary>
-/// ¸öÈË×Ô¸¶ºÏ¹æ·ÑÓÃ£¨°üÍ·£©
-/// <summary>
-public string GRZFHGFY£¨BT£© { get; set; }
-/// <summary>
-/// ÃÅÕïÍ³³ïÆğ¸¶ÏßÀÛ¼Æ½ğ¶î(°üÀ¨±¾´Î)
-/// <summary>
-public string MZTCQFXLJJE(BKBC) { get; set; }
-/// <summary>
-/// ÃÅÕïÍ³³ï½ØÖÁÉÏ´ÎÆğ·üÏßÀÛ¼Æ½ğ¶î(ºôÊĞ)
-/// <summary>
-public string MZTCJZSCQFXLJJE(HS) { get; set; }
-/// <summary>
-/// ¿ÉÏíÊÜµÄÃÅÕï¹«²¹½ğ¶î£¨Ö»Çø±¾¼¶ÄÜÓÃ£©
-/// <summary>
-public string KXSDMZGBJE£¨ZQBJNY£© { get; set; }
-/// <summary>
-/// ½ØÖ¹ÉÏ´Î±¾ÄêÃÅÕï¾ÍÒ½¹«ÎñÔ±²¹Öú»ù½ğÀÛ¼Æ£¨ Ö»Çø±¾¼¶ÄÜÓÃ£©
-/// <summary>
-public string JZSCBNMZJYGWYBZJJLJ£¨ ZQBJNY£© { get; set; }
-/// <summary>
-/// ±¾ÄêÃÅÕï¹«ÎñÔ±²¹Öú»ù½ğÀÛ¼Æ°üÀ¨±¾´Î£¨Ö»Çø±¾¼¶ÄÜÓÃ£©
-/// <summary>
-public string BNMZGWYBZJJLJBKBC£¨ZQBJNY£© { get; set; }
-/// <summary>
-/// ½ØÖÁÉÏ´Î×¡ÔºÀà·ûºÏ»ù±¾Ò½ÁÆÀÛ¼Æ(ºôÊĞ)
-/// <summary>
-public string JZSCZYLFHJBYLLJ(HS) { get; set; }
-/// <summary>
-/// ±¾Äê³¬´ó¶î¹«ÎñÔ±²¹ÖúÀÛ¼Æ£¨°üÀ¨±¾´Î£©
-/// <summary>
-public string BNCDEGWYBZLJ£¨BKBC£© { get; set; }
-/// <summary>
-/// ½ØÖÁÉÏ´ÎÃÅÂıÆğ·ü±ê×¼ÀÛ¼Æ
-/// <summary>
-public string JZSCMMQFBZLJ { get; set; }
-/// <summary>
-/// ½ØÖÁÉÏ´ÎÃÅÂı»ù½ğÖ§¸¶ÀÛ ¼Æ£¨½öÍ¨ÁÉÓĞ£©
-/// <summary>
-public string JZSCMMJJZFL J£¨JTLY£© { get; set; }
-/// <summary>
-/// ½ØÖÁÉÏ´Î´ó²¡ºÏ¹æ·ÑÓÃÀÛ¼Æ£¨ÎÚº££©
-/// <summary>
-public string JZSCDBHGFYLJ£¨WH£© { get; set; }
-/// <summary>
-/// ½øÈë´ó²¡±¨ÏúµÄÌØÊâ±ûÀàÒ©Æ·(ÎÚº£)
-/// <summary>
-public string JRDBBXDTSBLYP(WH) { get; set; }
-/// <summary>
-/// ´ó²¡µÚÒ»¶ÎÖ§¸¶½ğ¶î(ÎÚº£)
-/// <summary>
-public string DBDYDZFJE(WH) { get; set; }
-/// <summary>
-/// ´ó²¡µÚ¶ş¶ÎÖ§¸¶½ğ¶î(ÎÚº£)
-/// <summary>
-public string DBDEDZFJE(WH) { get; set; }
-/// <summary>
-/// ´ó²¡µÚÈı¶ÎÖ§¸¶½ğ¶î(ÎÚº£)
-/// <summary>
-public string DBDSDZFJE(WH) { get; set; }
-/// <summary>
-/// ´ó²¡µÚËÄ¶ÎÖ§¸¶½ğ¶î(ÎÚº£)
-/// <summary>
-public string DBDSDZFJE(WH) { get; set; }
-/// <summary>
-/// ´ó²¡µÚÒ»¶Î×Ô¸¶½ğ¶î(ÎÚº£)
-/// <summary>
-public string DBDYDZFJE(WH) { get; set; }
-/// <summary>
-/// ´ó²¡µÚ¶ş¶Î×Ô¸¶½ğ¶î(ÎÚº£)
-/// <summary>
-public string DBDEDZFJE(WH) { get; set; }
-/// <summary>
-/// ´ó²¡µÚÈı¶Î×Ô¸¶½ğ¶î(ÎÚº£)
-/// <summary>
-public string DBDSDZFJE(WH) { get; set; }
-/// <summary>
-/// ´ó²¡µÚËÄ¶Î×Ô¸¶½ğ¶î(ÎÚº£)
-/// <summary>
-public string DBDSDZFJE(WH) { get; set; }
-/// <summary>
-/// ´ó²¡µÚÒ»¶ÎÖ§¸¶±ÈÀı(ÎÚº£)
-/// <summary>
-public string DBDYDZFBL(WH) { get; set; }
-/// <summary>
-/// ´ó²¡µÚ¶ş¶ÎÖ§¸¶±ÈÀı(ÎÚº£)
-/// <summary>
-public string DBDEDZFBL(WH) { get; set; }
-/// <summary>
-/// ´ó²¡µÚÈı¶ÎÖ§¸¶±ÈÀı(ÎÚº£)
-/// <summary>
-public string DBDSDZFBL(WH) { get; set; }
-/// <summary>
-/// ´ó²¡µÚËÄ¶ÎÖ§¸¶±ÈÀı(ÎÚº£)
-/// <summary>
-public string DBDSDZFBL(WH) { get; set; }
-/// <summary>
-/// ´ó²¡Æğ¸¶ÏßÀÛ¼Æ(ÎÚº£)
-/// <summary>
-public string DBQFXLJ(WH) { get; set; }
-/// <summary>
-/// ±¾´ÎÖ§¸¶Æğ¸¶Ïß(ÎÚº£)
-/// <summary>
-public string BCZFQFX(WH) { get; set; }
-/// <summary>
-/// ¿çÊ¡ÆäËû»ù½ğÖ§¸¶½ğ¶î
-/// <summary>
-public string KSQTJJZFJE { get; set; }
-/// <summary>
-/// ÀÛ¼ÆºÏÀí×Ô¸¶½ğ¶î£¨ĞË°²ÃË¾ÓÃñ£©
-/// <summary>
-public string LJHLZFJE£¨XAMJM£© { get; set; }
-/// <summary>
-/// ½ØÖ¹ÉÏ´ÎºÏÀí×Ô¸¶£¨ĞË°²ÃË¾ÓÃñ£©
-/// <summary>
-public string JZSCHLZF£¨XAMJM£© { get; set; }
-/// <summary>
-/// ·öÆ¶ÉÌ±£»ù½ğÖ§³ö£¨Í¨ÁÉ£©
-/// <summary>
-public string FPSBJJZC£¨TL£© { get; set; }
-/// <summary>
-/// ÃñÕşÉÌ±£»ù½ğÖ§³ö£¨Í¨ÁÉ£©
-/// <summary>
-public string MZSBJJZC£¨TL£© { get; set; }
-/// <summary>
-/// ÃñÕş»ù½ğÖ§³ö£¨Í¨ÁÉ£©
-/// <summary>
-public string MZJJZC£¨TL£© { get; set; }
-/// <summary>
-/// Õş¸®´ó²¡¶µµ×»ù½ğÖ§³ö£¨Í¨ÁÉ£©
-/// <summary>
-public string ZFDBDDJJZC£¨TL£© { get; set; }
-/// <summary>
-/// ½ØÖ¹ÉÏ´ÎÃñÕş¾ÈÖú×¡ÔºÀàÀÛ¼Æ£¨Í¨ÁÉ£©
-/// <summary>
-public string JZSCMZJZZYLLJ£¨TL£© { get; set; }
-/// <summary>
-/// ½ØÖ¹ÉÏ´ÎÃñÕş¾ÈÖú×¡Ôº·ûºÏ»ù±¾Ò½ÁÆÀÛ¼Æ£¨Í¨ÁÉ£©
-/// <summary>
-public string JZSCMZJZZYFHJBYLLJ£¨TL£© { get; set; }
-/// <summary>
-/// Í³³ï³¬ÏŞ¶îÒ½Ôº³Ğµ££¨ÎÚº££©
-/// <summary>
-public string TCCXEYYCD£¨WH£© { get; set; }
-/// <summary>
-/// ×Ô¸¶³¬ÏŞ¶îÒ½Ôº³Ğµ££¨ÎÚº££©
-/// <summary>
-public string ZFCXEYYCD£¨WH£© { get; set; }
-/// <summary>
-/// µ¥²¡ÖÖ±êÊ¶£¨ÎÚº££©
-/// <summary>
-public string DBZBS£¨WH£© { get; set; }
-/// <summary>
-/// ·Ö¼¶ÕïÁÆ±êÖ¾£¨ÎÚº£·Ö¼¶ÕïÁÆ£©
-/// <summary>
-public string FJZLBZ£¨WHFJZL£© { get; set; }
-/// <summary>
-/// Ò½Ôº½±Àø»ù±¾Ò½ÁÆ·ÑÓÃ£¨Çø±¾¼¶£©
-/// <summary>
-public string YYJLJBYLFY£¨QBJ£© { get; set; }
+<style>
+.ivu-form .ivu-form-item-label{
+	padding: 10px 0px 10px 0;
+}
+
+</style>
+<template>
+    <div>
+		<Card dis-hover>
+            <div class="page-body">
+                <Form ref="queryForm" :label-width="70" label-position="left" inline>
+                	<Row>
+						<Col span="3">
+							<Input v-model="proName" placeholder="åç§°æˆ–åŠ©è®°ç¬¦"/>
+						</Col>
+						<Col span="4">
+							<FormItem label="åŒ»ä¿ç±»å‹ï¼š" style="width:100%;margin-left:5px">
+								<Select v-model="type" style="width:100%; ">
+									<Option v-for="item in medicalTypes" :value="item.value" :key="item.value">{{ item.text }}</Option>
+								</Select>
+							</FormItem>
+						</Col>
+						<Col span="4">
+							<FormItem label="ç±» å‹ï¼š"  style="width:100%;margin-left:5px">
+								<Select v-model="type" >
+									<Option v-for="item in typeOptions" :value="item.value" :key="item.value">{{ item.text }}</Option>
+								</Select>
+							</FormItem>
+						</Col>
+	                </Row>
+                </Form>
+				<div class="">
+                    <Table :loading="table.loading" :columns="columns" :no-data-text="L('NoDatas')" border :data="list">
+                    </Table>
+                    <Page  class-name="fengpage" :total="table.totalCount" class="margin-top-10" @on-change="pageChange" :page-size="table.pageSize" :current="table.currentPage"></Page>
+                </div>
+            </div>
+        </Card>
+        <modal v-model="modalShow" v-if="modalShow" :data='modalData' />
+    </div>
+</template>
+<script lang="ts">
+import AbpBase from '../../../lib/abpbase'
+import { Component, Vue,Inject, Prop,Watch } from 'vue-property-decorator';
+import {GetMedicalCodeSettingType, MedicareCodeOfSpecialData} from '../../../api/specialDictionary'
+import Util from '../../../lib/util'
+import u from 'underscore'
+import modal from './modal.vue'
+import {GetSysListByCode} from "@/api/configureDictionary"
+
+@Component({
+    components:{modal}
+})
+export default class Project extends AbpBase {
+	@Watch('proName')
+	WatchProName(val: string, oldVal: string) {
+		this.table.currentPage = 1
+		this.getData()
+	}
+
+	@Watch('type')
+	WatchType(val: string, oldVal: string) {
+		this.table.currentPage = 1
+		this.getData()
+	}
+	proName = ''//æŸ¥è¯¢æ¡ä»¶
+	list = []//tableæ•°æ®æº
+	status = 1 //å¯ç”¨çŠ¶æ€;
+	table = {
+		loading:false,
+		totalCount : 0,
+		pageSize : 10,
+		currentPage:1
+    }
+    statusOptions = [
+        {label:'å¯ç”¨',value:1},
+        {label:'ç¦ç”¨',value:0},
+	]
+	type = 1
+	types = {
+			
+	}
+	typeOptions = []
+    medicalTypes = []
+    modalData = {}
+    modalShow = false
+	async created() {
+	    await this.getType()
+		this.getData()
+	}
+	async getType() {
+	    this.medicalTypes = await GetSysListByCode({code: "15", strName: ''}) || []
+		if (this.medicalTypes.length) {
+            let res = await GetMedicalCodeSettingType({medicalTypeId: this.medicalTypes[0].id})
+		}
+
+	}
+	async getData(){
+		this.table.loading = true
+		let payload = {
+			name:this.proName,
+			medicareSpecial:this.type,
+			status:this.status,
+			pageSize:this.table.pageSize,
+			Page:this.table.currentPage
+		}
+		let response = await MedicareCodeOfSpecialData(payload)
+		this.list = response.data.items.map((item:any)=>{
+			if(item.medicareSpecialType==1 || item.medicareSpecialType==2){
+				item.name = item.name+`(${item.model})`
+			}
+			item.medicareSpecialName = this.typeOptions.find((v:any)=>{return v.value == item.medicareSpecialType}).text
+			return item;
+		})
+
+		this.table.totalCount = response.data.totalCount
+		this.table.loading = false
+	}
+	pageChange(page: number) {
+		this.table.currentPage = page
+		this.getData()
+	}
+	columns = [
+        {
+            title: "ç±»å‹",
+            key: 'medicareSpecialName'
+        },
+        {
+            title: "åç§°",
+            key:'name',
+        },
+        {
+            title: "å¤‡æ³¨",
+            key:'remark',
+        },
+        {
+            title: "åŒ»ä¿ç¼–ç ",
+            render:(h: any, p: any) => {
+				return h('Input',{
+				    props: {
+				        value: 111
+					}
+				},[
+				    h('i',{
+                        slot: 'append',
+				        class: {
+							'iconfont': true
+						},
+						style:{
+                            'font-size': '10px'
+						},
+                        on: {
+                            input: function (event) {
+                                p.row.medicareName = event
+                            }
+                        },
+                        domProps: {
+                            innerHTML: p.row.$isEdit ? '&#xe602;' : '&#xe611;'
+                        }
+					})
+				])
+			}
+        },
+        {
+            title: this.L('Actions'),
+            key: 'Actions',
+            width: 150,
+            render: (h: any, params: any) => {
+                return h('div', [
+                    h('Button', {
+                        props: {
+                            type: 'primary',
+                            size: 'small'
+                        },
+                        style: {
+                            marginRight: '5px'
+                        },
+                        on: {
+                            click: () => {
+                                this.manage(params.row)
+                            }
+                        }
+                    },'åŒ»ä¿ç¼–ç ç»´æŠ¤'),
+                ])
+		    }
+        }
+	]
+	manage(row:any){
+		this.modalShow = true
+		this.modalData = row
+	}
+}
+</script>
+<style scoped>
+	.ml-15{
+		margin-left: 15px
+	}
+
+</style>
+
+

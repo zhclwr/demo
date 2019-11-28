@@ -1,4 +1,4 @@
-package com.zhclwr.myapplication
+package com.zhclwr.fullscreen
 
 import org.junit.Test
 

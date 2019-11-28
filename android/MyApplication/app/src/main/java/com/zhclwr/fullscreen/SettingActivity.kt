@@ -1,4 +1,4 @@
-package com.zhclwr.myapplication
+package com.zhclwr.fullscreen
 
 import android.content.Context
 import android.content.Intent
