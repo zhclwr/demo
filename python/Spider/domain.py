@@ -7,7 +7,7 @@ class Proxy(object):
         self.port = port
         # 代理IP支持的协议类型，http:0 https:1 both:2
         self.protocol = protocol
-        # 匿名程度 透明：0  匿名：1 高匿
+        # 匿名程度 透明：0  匿名：1 高匿: 2
         self.nick_type = nick_type
         # 响应速度 单位s
         self.speed = speed
