@@ -1,30 +1,22 @@
 // swagger 出参生成表格
-a = `patientName	string
-患者姓名
+a = `dialysisWay	string
+透析模式
 
-vaType	string
-通路类型
+creationTime	string($date-time)
+创建时间
 
-bloodVelocity	integer($int32)
-血流量
+creatorUserId	integer($int64)
+创建人编号
 
-dryWeight	number($double)
-干体重
+creatorUser	string
+创建人姓名
 
-radio	string
-血流量/干体重
+id	integer($int32)
+主键Id
 
-dialysateFlowRate	integer($int32)
-透析液流量
-
-dialyzer	string
-透析器
-
-totalTimes	string
-透析总时间
-
-count	integer($int32)
-透析次数`
+remarks	string
+备注
+`
 
 
 title = ''
@@ -35,7 +27,7 @@ for(let i in arr){
     if (i % 3 === 0) {
         key = arr[i].split('\t')[0]
     } else if (i % 3 === 1) {
-        title = arr[i]
+        title = arr[i].replace('[必填]', '')
         print(`{
     title: '${title}',
     key: '${key}'

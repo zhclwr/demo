@@ -17,11 +17,3 @@ Date.prototype.Format = function (fmt) {
 let d = new Date()
 console.log(d.Format("HH:mm"))
 
-print = console.log
-let arr = [1,2,3,4,5,6,7,8,9,10]
-arr.forEach((item, index) => {
-    if (item === 3 || item === 6) {
-        arr.splice(index, 1)
-    }
-})
-print(arr)

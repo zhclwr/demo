@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     lateinit var dialog: ProgressDialog
     lateinit var sp: SharedPreferences
-    var url = "http://192.168.3.59/#/bed"
+    var url = "http://49.234.151.237:9528/"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -62,8 +62,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             override fun onPageFinished(view: WebView?, url: String?) {
                 super.onPageFinished(view, url)
-                // 加载完 隐藏弹窗
-                dialog.dismiss()
+                if(dialog.isShowing) {
+                    // 加载完 隐藏弹窗
+                    dialog.dismiss()
+                }
+
             }
 
         }
