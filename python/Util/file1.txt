@@ -1,4 +1,0 @@
-1	审批标志	VARCHAR2(3)	NOT NULL	1已审批
-2	病种编码	VARCHAR2(20)		
-3	病种名称	VARCHAR2(100)		
-4	疾病分类	VARCHAR2(3)		
