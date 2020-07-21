@@ -34,6 +34,3 @@
     div2.style.visibility = 'hidden'
 
 })();
-
-
-
